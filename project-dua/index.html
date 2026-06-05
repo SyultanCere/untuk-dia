@@ -1,177 +1,192 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="theme-color" content="#fdf8f4">
-<title>Untuk Dirimu — 2 Tahun</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="theme-color" content="#fdf8f4">
+  <title>Untuk Dirimu — 2 Tahun</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="petal-wrap" id="petals"></div>
-<div class="toast" id="toast"></div>
-<button class="music-btn" id="musicBtn" aria-label="Musik">♪</button>
+  <div class="petal-wrap" id="petals"></div>
+  <div class="toast" id="toast"></div>
+  <button class="music-btn" id="musicBtn" aria-label="Musik">♪</button>
 
-<nav>
-  <span class="nav-brand">untuk dirimu</span>
-  <div class="nav-links">
-    <a href="#surat">Surat</a>
-    <a href="#kenangan">Kenangan</a>
-    <a href="#pesan">Pesan</a>
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <button class="lightbox-nav lightbox-prev" onclick="lbPrev()">‹</button>
+    <button class="lightbox-nav lightbox-next" onclick="lbNext()">›</button>
+    <div class="lightbox-inner" id="lbInner">
+      <div id="lbContent"></div>
+      <div class="lightbox-counter" id="lbCounter"></div>
+      <div class="lightbox-by" id="lbBy"></div>
+    </div>
   </div>
-</nav>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-tag">13 Juni 2024 — 13 Juni 2026</div>
-  <h1 class="hero-big">Dua<br><em>Tahun</em></h1>
-  <p class="hero-sub">bersamamu, walau tanpa nama — tapi selalu terasa nyata di hatiku</p>
-  <p class="hero-date-label">untuk dirimu, yang aku sayangi</p>
-  <div class="scroll-cue">gulir</div>
-</div>
+  <!-- NAV -->
+  <nav>
+    <span class="nav-brand">untuk dirimu</span>
+    <div class="nav-links">
+      <a href="#surat">Surat</a>
+      <a href="#kenangan">Kenangan</a>
+      <a href="#pesan">Pesan</a>
+    </div>
+  </nav>
 
-<div class="divider">· · ·</div>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-tag">13 Juni 2023 — 13 Juni 2025</div>
+    <h1 class="hero-big">Dua<br><em>Tahun</em></h1>
+    <p class="hero-sub">bersamamu, walau tanpa nama — tapi selalu terasa nyata di hatiku</p>
+    <p class="hero-date-label">untuk dirimu, yang aku sayangi</p>
+    <div class="scroll-cue">gulir</div>
+  </div>
 
-<!-- SURAT -->
-<section id="surat" class="reveal">
-  <div class="s-label">pesan untukmu</div>
-  <h2 class="s-title">Surat<br><em>dari hatiku</em></h2>
-  <div class="envelope" id="envelope">
-    <div class="env-body">
-      <div class="env-prompt" id="envPrompt">
-        <div class="env-icon">💌</div>
-        <p>Ada surat untukmu di sini</p>
-        <button class="open-btn" onclick="openLetter()">Buka Suratnya</button>
+  <div class="divider">· · ·</div>
+
+  <!-- SURAT -->
+  <section id="surat" class="reveal">
+    <div class="s-label">pesan untukmu</div>
+    <h2 class="s-title">Surat<br><em>dari hatiku</em></h2>
+    <div class="envelope" id="envelope">
+      <div class="env-body">
+        <div class="env-prompt" id="envPrompt">
+          <div class="env-icon">💌</div>
+          <p>Ada surat untukmu di sini</p>
+          <button class="open-btn" onclick="openLetter()">Buka Suratnya</button>
+        </div>
+        <div class="letter-content" id="letterContent">
+          <p>Sayang,</p>
+          <p>Dua tahun bukan waktu yang sebentar. Dan dalam dua tahun itu, tanpa sadar kamu sudah menjadi bagian dari hari-hariku yang paling aku tunggu.</p>
+          <p>Aku tidak tahu bagaimana menyebutnya — tapi yang aku tahu, tiap kali aku bersamamu, dunia terasa sedikit lebih ringan. Kamu mengajarkanku bahwa kehadiran seseorang jauh lebih berarti dari sekadar sebuah label.</p>
+          <p>Hari ini, aku hanya ingin kamu tahu: dua tahun ini sangat berarti untukku. Dan kamu, sangat berarti untukku.</p>
+          <span class="letter-sign">— Selalu, seseorang yang menyayangimu ♡</span>
+        </div>
       </div>
-      <div class="letter-content" id="letterContent">
-        <p>Sayang,</p>
-        <p>Dua tahun bukan waktu yang sebentar. Dan dalam dua tahun itu, tanpa sadar kamu sudah menjadi bagian dari hari-hariku yang paling aku tunggu.</p>
-        <p>Aku tidak tahu bagaimana menyebutnya — tapi yang aku tahu, tiap kali aku bersamamu, dunia terasa sedikit lebih ringan. Kamu mengajarkanku bahwa kehadiran seseorang jauh lebih berarti dari sekadar sebuah label.</p>
-        <p>Hari ini, aku hanya ingin kamu tahu: dua tahun ini sangat berarti untukku. Dan kamu, sangat berarti untukku.</p>
-        <span class="letter-sign">— Selalu, seseorang yang menyayangimu ♡</span>
+    </div>
+  </section>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ALASAN -->
+  <section id="alasan" class="reveal">
+    <div class="s-label">mengapa kamu</div>
+    <h2 class="s-title">Hal yang aku<br><em>sukai darimu</em></h2>
+    <div class="reasons-grid">
+      <div class="r-card"><div class="r-num">01</div><div class="r-text">Caramu tertawa — tulus dan tanpa dibuat-buat, selalu membuatku ikut tersenyum.</div></div>
+      <div class="r-card"><div class="r-num">02</div><div class="r-text">Kamu tidak pernah menghakimi. Di dekatmu, aku bisa menjadi diriku sendiri.</div></div>
+      <div class="r-card"><div class="r-num">03</div><div class="r-text">Perhatianmu yang kecil-kecil — mungkin tidak kamu sadari, tapi selalu aku ingat.</div></div>
+      <div class="r-card"><div class="r-num">04</div><div class="r-text">Cara kamu hadir di saat yang tepat, tanpa perlu diminta.</div></div>
+      <div class="r-card"><div class="r-num">05</div><div class="r-text">Senyummu yang bisa mengubah hari yang berat jadi terasa lebih baik.</div></div>
+      <div class="r-card"><div class="r-num">06</div><div class="r-text">Kamu jujur. Dan kejujuranmu adalah hal yang paling aku hargai.</div></div>
+    </div>
+  </section>
+
+  <div class="divider">· · ·</div>
+
+  <!-- GALERI -->
+  <section id="galeri" class="reveal">
+    <div class="s-label">foto &amp; video kita</div>
+    <h2 class="s-title">Kenangan dalam<br><em>gambar &amp; video</em></h2>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--muted);margin-bottom:20px">Ketuk untuk melihat lebih dekat ♡</p>
+    <div class="gallery-toolbar">
+      <label class="gallery-btn">
+        ＋ Foto / Video
+        <input type="file" id="diaUpload" accept="image/*,video/*" multiple>
+      </label>
+      <label class="gallery-btn primary" id="adminBtnLabel" style="display:none">
+        ＋ Upload (Admin)
+        <input type="file" id="adminUpload" accept="image/*,video/*" multiple>
+      </label>
+      <button class="gallery-btn" id="adminToggle" onclick="toggleAdmin()">⚙ Admin</button>
+    </div>
+    <div class="gallery-upload-bar" id="uploadBar">
+      <div class="gallery-upload-progress">
+        <div class="gallery-upload-fill" id="uploadFill"></div>
+      </div>
+      <span class="gallery-upload-label" id="uploadLabel">Mengunggah...</span>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-empty">Memuat media...</div>
+    </div>
+  </section>
+
+  <div class="divider">· · ·</div>
+
+  <!-- KENANGAN -->
+  <section id="kenangan" class="reveal">
+    <div class="s-label">momen kita</div>
+    <h2 class="s-title">Kenangan yang<br><em>selalu aku ingat</em></h2>
+    <div class="timeline">
+      <div class="tm-item">
+        <div class="tm-title">Pertama kali kita jalan berdua</div>
+        <div class="tm-desc">Masih ingat betapa gugupnya kita waktu itu. Tapi dari situlah semuanya dimulai — dengan langkah yang sederhana dan hati yang penuh harap.</div>
+      </div>
+      <div class="tm-item">
+        <div class="tm-title">Malam yang panjang itu</div>
+        <div class="tm-desc">Kita bicara sampai larut, tentang mimpi, tentang takut, tentang hal-hal yang tidak biasa kita ceritakan ke siapa pun. Malam itu terasa seperti rumah.</div>
+      </div>
+      <div class="tm-item">
+        <div class="tm-title">Saat kamu ada di saat aku butuh</div>
+        <div class="tm-desc">Tidak banyak yang bisa melakukan itu. Tapi kamu selalu ada — dengan cara yang tepat, di waktu yang tepat.</div>
+      </div>
+      <div class="tm-item">
+        <div class="tm-title">Tawa kecil yang kita ciptakan</div>
+        <div class="tm-desc">Lelucon bodoh yang hanya kita yang mengerti. Kata-kata yang punya makna tersendiri di antara kita berdua.</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="divider">· · ·</div>
+  <div class="divider">· · ·</div>
 
-<!-- ALASAN -->
-<section id="alasan" class="reveal">
-  <div class="s-label">mengapa kamu</div>
-  <h2 class="s-title">Hal yang aku<br><em>sukai darimu</em></h2>
-  <div class="reasons-grid">
-    <div class="r-card"><div class="r-num">01</div><div class="r-text">Suka Bercerita — kamu menceritakan semua hal, walau mungkin respon ku tidak baik.</div></div>
-    <div class="r-card"><div class="r-num">02</div><div class="r-text">Senyummu yang bisa mengubah hari yang berat jadi terasa lebih baik.</div></div>
-    <div class="r-card"><div class="r-num">03</div><div class="r-text">Perhatianmu yang kecil-kecil — mungkin tidak kamu sadari, tapi selalu aku ingat.</div></div>
-    <div class="r-card"><div class="r-num">04</div><div class="r-text">Cara kamu hadir di saat yang tepat.</div></div>
-    <div class="r-card"><div class="r-num">05</div><div class="r-text">Kamu tidak pernah menghakimi. Di dekatmu, aku bisa menjadi diriku sendiri.</div></div>
-    <div class="r-card"><div class="r-num">06</div><div class="r-text">Tawa mu yang membuatku tersenyum.</div></div>
-  </div>
-</section>
-
-<div class="divider">· · ·</div>
-
-<!-- GALERI -->
-<section id="galeri" class="reveal">
-  <div class="s-label">foto kita</div>
-  <h2 class="s-title">Kenangan dalam<br><em>gambar</em></h2>
-  <p style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--muted);margin-bottom:20px">Foto-foto kenangan kita yang tersimpan ♡</p>
-  <div class="gallery-toolbar">
-    <label class="gallery-btn">
-      ＋ Tambah foto
-      <input type="file" id="diaUpload" accept="image/*" multiple>
-    </label>
-    <label class="gallery-btn primary" id="adminBtnLabel" style="display:none">
-      ＋ Upload banyak foto
-      <input type="file" id="adminUpload" accept="image/*" multiple>
-    </label>
-    <button class="gallery-btn" id="adminToggle" onclick="toggleAdmin()">⚙ Admin</button>
-    <!-- PASSWORD admin2tahun -->
-  </div>
-  <div class="gallery-upload-bar" id="uploadBar">
-    <div class="gallery-upload-progress"><div class="gallery-upload-fill" id="uploadFill"></div></div>
-    <span class="gallery-upload-label" id="uploadLabel">Mengunggah...</span>
-  </div>
-  <div class="gallery-grid" id="galleryGrid">
-    <div class="gallery-empty">Memuat foto...</div>
-  </div>
-</section>
-
-<div class="divider">· · ·</div>
-
-<!-- KENANGAN -->
-<section id="kenangan" class="reveal">
-  <div class="s-label">momen kita</div>
-  <h2 class="s-title">Kenangan yang<br><em>selalu aku ingat</em></h2>
-  <div class="timeline">
-    <div class="tm-item">
-      <div class="tm-title">Pertama</div>
-      <div class="tm-title">Pertama kali kita jalan berdua</div>
-      <div class="tm-desc">Masih ingat betapa gugupnya waktu itu. Tapi dari situlah semuanya dimulai — dengan langkah yang sederhana dan hati yang penuh harap.</div>
+  <!-- PESAN -->
+  <section id="pesan" class="reveal">
+    <div class="s-label">suaramu</div>
+    <h2 class="s-title">Apa yang ingin<br><em>kamu sampaikan?</em></h2>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--muted);margin-bottom:20px">Tuliskan apa yang ada di hatimu — perasaan, pikiran, apapun itu ♡</p>
+    <div class="message-section">
+      <textarea class="msg-textarea" id="msgInput" placeholder="Tulis sesuatu untuknya..."></textarea>
+      <button class="msg-send" id="msgSendBtn" onclick="sendMessage()">
+        <span id="msgBtnText">Kirim pesan</span>
+      </button>
+      <div class="msg-response" id="msgResponse">
+        <div class="msg-response-label">✦ Pesan tersimpan dengan indah</div>
+        <div class="msg-response-text" id="msgResponseText"></div>
+      </div>
     </div>
-    <div class="tm-item">
-      <div class="tm-title">Malam yang panjang itu</div>
-      <div class="tm-desc">Kita bicara sampai larut, tentang mimpi, tentang takut, tentang hal-hal yang tidak biasa kita ceritakan ke siapa pun. Malam itu terasa seperti rumah.</div>
+    <div class="saved-section">
+      <div class="saved-header">
+        <span class="saved-title-text">Semua pesan yang dikirim</span>
+        <span class="saved-count" id="savedCount"></span>
+      </div>
+      <div class="saved-list" id="savedList">
+        <div class="saved-loading">Memuat pesan...</div>
+      </div>
     </div>
-    <div class="tm-item">
-      <div class="tm-title">Saat kamu ada di saat aku butuh</div>
-      <div class="tm-desc">Tidak banyak yang bisa melakukan itu. Tapi kamu selalu ada — dengan cara yang tepat, di waktu yang tepat.</div>
+  </section>
+
+  <div class="divider">· · ·</div>
+
+  <!-- HARAPAN -->
+  <section id="harapan" class="reveal">
+    <div class="s-label">ke depan</div>
+    <h2 class="s-title">Harapanku<br><em>untuk kita</em></h2>
+    <div class="hopes-box">
+      <p>Aku tidak tahu apa yang akan terjadi ke depannya. Tapi aku tahu satu hal — aku ingin terus ada di sisimu, dalam bentuk apapun yang membuatmu nyaman.</p>
+      <p>Semoga suatu hari nanti, kita tidak perlu lagi bingung menyebut ini apa. Semoga kita bisa dengan berani berkata: ini kita, dan kita cukup.</p>
+      <p>Sampai hari itu tiba, aku di sini. Selalu.</p>
     </div>
-    <div class="tm-item">
-      <div class="tm-title">Tawa kecil yang kita ciptakan</div>
-      <div class="tm-desc">Lelucon bodoh yang hanya kita yang mengerti. Kata-kata yang punya makna tersendiri di antara kita berdua.</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<div class="divider">· · ·</div>
-
-<!-- PESAN -->
-<section id="pesan" class="reveal">
-  <div class="s-label">suaramu</div>
-  <h2 class="s-title">Apa yang ingin<br><em>kamu sampaikan?</em></h2>
-  <p style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--muted);margin-bottom:20px">Tuliskan apa yang ada di hatimu — perasaan, pikiran, apapun itu ♡</p>
-  <div class="message-section">
-    <textarea class="msg-textarea" id="msgInput" placeholder="Tulis sesuatu untuknya..."></textarea>
-    <button class="msg-send" id="msgSendBtn" onclick="sendMessage()">
-      <span id="msgBtnText">Kirim pesan</span>
-    </button>
-    <div class="msg-response" id="msgResponse">
-      <div class="msg-response-label">✦ Pesan tersimpan dengan indah</div>
-      <div class="msg-response-text" id="msgResponseText"></div>
-    </div>
-  </div>
-  <div class="saved-section">
-    <div class="saved-header">
-      <span class="saved-title-text">Semua pesan yang dikirim</span>
-      <span class="saved-count" id="savedCount"></span>
-    </div>
-    <div class="saved-list" id="savedList"><div class="saved-loading">Memuat pesan...</div></div>
-  </div>
-</section>
-
-<div class="divider">· · ·</div>
-
-<!-- HARAPAN -->
-<section id="harapan" class="reveal">
-  <div class="s-label">ke depan</div>
-  <h2 class="s-title">Harapanku<br><em>untuk kita</em></h2>
-  <div class="hopes-box">
-    <p>Aku tidak tahu apa yang akan terjadi ke depannya. Tapi aku tahu satu hal — aku ingin terus ada di sisimu, dalam bentuk apapun yang membuatmu nyaman.</p>
-    <p>Semoga suatu hari nanti, kita tidak perlu lagi bingung menyebut ini apa. Semoga kita bisa dengan berani berkata: ini kita, dan kita cukup.</p>
-    <p>Sampai hari itu tiba, aku di sini. Selalu.</p>
-    <p>Aku juga berharap kapanpun dan dimanapun itu, tidak pernah ada kata "udah ya, aku jadian sama si (itu), atau "kan kita cuma teman". Please, aku sangat berharap itu tidak terjadi di Antara Kita.</p>
-    <p>Aku juga berharap tidak ada hal yang sia-sia diantara apa yang kita jalani ini yaa...</p>
-</section>
-
-<footer>
-  <span class="f-heart">♡</span>
-  <p>Dua tahun yang tidak akan pernah aku sesali.</p>
-  <p class="f-date">13 Juni 2024 · 13 Juni 2026</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <span class="f-heart">♡</span>
+    <p>Dua tahun yang tidak akan pernah aku sesali.</p>
+    <p class="f-date">13 Juni 2023 · 13 Juni 2025</p>
+  </footer>
 
 <script>
 // ════════════════════════════════════════
@@ -186,7 +201,7 @@ const HEADERS = {
 };
 const STORAGE_URL    = `${SUPABASE_URL}/storage/v1/object/galeri-media`;
 const STORAGE_PUBLIC = `${SUPABASE_URL}/storage/v1/object/public/galeri-media`;
- 
+
 // ════════════════════════════════════════
 //  SUPABASE — PESAN
 // ════════════════════════════════════════
@@ -202,7 +217,7 @@ async function dbFetch() {
   const r = await fetch(`${SUPABASE_URL}/rest/v1/pesan?order=waktu.desc&select=*`, { headers: HEADERS });
   return r.json();
 }
- 
+
 // ════════════════════════════════════════
 //  SUPABASE — GALERI
 // ════════════════════════════════════════
@@ -228,7 +243,7 @@ async function galeriDelete(id, mediaUrl) {
     });
   }
 }
- 
+
 // ════════════════════════════════════════
 //  SUPABASE STORAGE — upload
 // ════════════════════════════════════════
@@ -243,7 +258,7 @@ async function uploadToStorage(file, folder) {
   if (!r.ok) throw new Error('Upload gagal');
   return `${STORAGE_PUBLIC}/${name}`;
 }
- 
+
 // ════════════════════════════════════════
 //  PETALS
 // ════════════════════════════════════════
@@ -258,7 +273,7 @@ function initPetals() {
     pc.appendChild(p);
   }
 }
- 
+
 // ════════════════════════════════════════
 //  MUSIK
 // ════════════════════════════════════════
@@ -266,7 +281,7 @@ const bgAudio = new Audio('lagu.mp3');
 bgAudio.loop = true;
 bgAudio.volume = 0.7;
 let musicPlaying = false;
- 
+
 function initMusic() {
   document.getElementById('musicBtn').addEventListener('click', async () => {
     if (!musicPlaying) {
@@ -289,7 +304,7 @@ function initMusic() {
     }
   });
 }
- 
+
 // ════════════════════════════════════════
 //  SURAT
 // ════════════════════════════════════════
@@ -298,12 +313,12 @@ function openLetter() {
   document.getElementById('envelope').classList.add('opened');
   showToast('Surat terbuka ♡');
 }
- 
+
 // ════════════════════════════════════════
 //  LIGHTBOX
 // ════════════════════════════════════════
 let lbItems = [], lbCurrent = 0;
- 
+
 function openLightbox(items, index) {
   lbItems = items; lbCurrent = index;
   renderLightbox();
@@ -321,7 +336,7 @@ function closeLightbox() {
 }
 function lbPrev() { lbCurrent = (lbCurrent - 1 + lbItems.length) % lbItems.length; renderLightbox(); }
 function lbNext() { lbCurrent = (lbCurrent + 1) % lbItems.length; renderLightbox(); }
- 
+
 function renderLightbox() {
   const item    = lbItems[lbCurrent];
   const content = document.getElementById('lbContent');
@@ -342,7 +357,7 @@ function renderLightbox() {
   counter.textContent = `${lbCurrent + 1} / ${lbItems.length}`;
   byEl.textContent    = item.oleh === 'admin' ? 'dari kamu' : 'dari dia';
 }
- 
+
 function initLightbox() {
   const lb = document.getElementById('lightbox');
   lb.addEventListener('click', e => { if (e.target === lb || e.target.id === 'lbInner') closeLightbox(); });
@@ -359,13 +374,13 @@ function initLightbox() {
     if (Math.abs(dx) > 50) dx < 0 ? lbNext() : lbPrev();
   });
 }
- 
+
 // ════════════════════════════════════════
 //  GALERI
 // ════════════════════════════════════════
 let isAdmin = false, currentMedia = [];
 const ADMIN_PASS = 'admin2tahun';
- 
+
 function toggleAdmin() {
   if (isAdmin) {
     isAdmin = false;
@@ -388,7 +403,7 @@ function toggleAdmin() {
     }
   }
 }
- 
+
 async function loadGallery() {
   try {
     const data = await galeiFetch();
@@ -398,7 +413,7 @@ async function loadGallery() {
     document.getElementById('galleryGrid').innerHTML = '<div class="gallery-empty">Gagal memuat media.</div>';
   }
 }
- 
+
 function renderGallery(items) {
   const grid = document.getElementById('galleryGrid');
   grid.innerHTML = '';
@@ -445,7 +460,7 @@ function renderGallery(items) {
     grid.appendChild(item);
   });
 }
- 
+
 async function uploadFiles(files, oleh) {
   if (!files || files.length === 0) return;
   const bar = document.getElementById('uploadBar');
@@ -483,7 +498,7 @@ async function uploadFiles(files, oleh) {
   showToast(`${total} file tersimpan ♡`);
   loadGallery();
 }
- 
+
 function readFileAsBase64(file) {
   return new Promise((res, rej) => {
     const r = new FileReader();
@@ -510,13 +525,13 @@ function base64ToBlob(base64, mime) {
   for (let i = 0; i < data.length; i++) buf[i] = data.charCodeAt(i);
   return new Blob([buf], { type: mime });
 }
- 
+
 function initGallery() {
   document.getElementById('diaUpload').addEventListener('change', e => { uploadFiles(e.target.files, 'dia'); e.target.value = ''; });
   document.getElementById('adminUpload').addEventListener('change', e => { uploadFiles(e.target.files, 'admin'); e.target.value = ''; });
   loadGallery();
 }
- 
+
 // ════════════════════════════════════════
 //  PESAN
 // ════════════════════════════════════════
@@ -543,7 +558,7 @@ async function loadMessages() {
     list.innerHTML = '<div class="saved-empty">Gagal memuat. Cek koneksi internet.</div>';
   }
 }
- 
+
 async function sendMessage() {
   const input   = document.getElementById('msgInput');
   const text    = input.value.trim();
@@ -582,7 +597,7 @@ async function sendMessage() {
   btn.disabled = false;
   btnText.textContent = 'Kirim pesan';
 }
- 
+
 // ════════════════════════════════════════
 //  TOAST
 // ════════════════════════════════════════
@@ -591,7 +606,7 @@ function showToast(msg) {
   t.textContent = msg; t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2500);
 }
- 
+
 // ════════════════════════════════════════
 //  SCROLL REVEAL
 // ════════════════════════════════════════
@@ -601,7 +616,7 @@ function initReveal() {
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
 }
- 
+
 // ════════════════════════════════════════
 //  INIT
 // ════════════════════════════════════════
