@@ -6,16 +6,30 @@
   <meta name="theme-color" content="#fdf8f4">
   <title>Untuk Dirimu — 2 Tahun</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
 </head>
 <body>
+
+  <!-- SPLASH SCREEN -->
+  <div class="splash" id="splash">
+    <div class="splash-petals" id="splashPetals"></div>
+    <div class="splash-content">
+      <div class="splash-heart">♡</div>
+      <div class="splash-tag">13 Juni 2024 — 13 Juni 2026</div>
+      <h1 class="splash-title">Untuk<br><em>Dirimu</em></h1>
+      <p class="splash-sub">ada sesuatu yang ingin aku sampaikan</p>
+      <button class="splash-btn" id="splashBtn">Buka ♡</button>
+      <p class="splash-note">dengan musik yang menyertaimu</p>
+    </div>
+  </div>
 
   <div class="petal-wrap" id="petals"></div>
   <div class="toast" id="toast"></div>
   <button class="music-btn" id="musicBtn" aria-label="Musik">♪</button>
 
   <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
+  <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()">✕</button>
     <button class="lightbox-nav lightbox-prev" onclick="lbPrev()">‹</button>
     <button class="lightbox-nav lightbox-next" onclick="lbNext()">›</button>
@@ -38,7 +52,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <div class="hero-tag">13 Juni 2023 — 13 Juni 2025</div>
+    <div class="hero-tag">13 Juni 2024 — 13 Juni 2026</div>
     <h1 class="hero-big">Dua<br><em>Tahun</em></h1>
     <p class="hero-sub">bersamamu, walau tanpa nama — tapi selalu terasa nyata di hatiku</p>
     <p class="hero-date-label">untuk dirimu, yang aku sayangi</p>
@@ -77,11 +91,11 @@
     <h2 class="s-title">Hal yang aku<br><em>sukai darimu</em></h2>
     <div class="reasons-grid">
       <div class="r-card"><div class="r-num">01</div><div class="r-text">Caramu tertawa — tulus dan tanpa dibuat-buat, selalu membuatku ikut tersenyum.</div></div>
-      <div class="r-card"><div class="r-num">02</div><div class="r-text">Kamu tidak pernah menghakimi. Di dekatmu, aku bisa menjadi diriku sendiri.</div></div>
-      <div class="r-card"><div class="r-num">03</div><div class="r-text">Perhatianmu yang kecil-kecil — mungkin tidak kamu sadari, tapi selalu aku ingat.</div></div>
-      <div class="r-card"><div class="r-num">04</div><div class="r-text">Cara kamu hadir di saat yang tepat, tanpa perlu diminta.</div></div>
-      <div class="r-card"><div class="r-num">05</div><div class="r-text">Senyummu yang bisa mengubah hari yang berat jadi terasa lebih baik.</div></div>
-      <div class="r-card"><div class="r-num">06</div><div class="r-text">Kamu jujur. Dan kejujuranmu adalah hal yang paling aku hargai.</div></div>
+      <div class="r-card"><div class="r-num">02</div><div class="r-text">Senyummu yang bisa mengubah hari yang berat jadi terasa lebih baik.</div></div>
+      <div class="r-card"><div class="r-num">03</div><div class="r-text">Kamu tidak pernah menghakimi. Di dekatmu, aku bisa menjadi diriku sendiri.</div></div>
+      <div class="r-card"><div class="r-num">04</div><div class="r-text">Perhatianmu yang kecil-kecil — mungkin tidak kamu sadari, tapi selalu aku ingat.</div></div>
+      <div class="r-card"><div class="r-num">05</div><div class="r-text">Cara kamu hadir di saat yang tepat, tanpa perlu diminta.</div></div>
+      <div class="r-card"><div class="r-num">06</div><div class="r-text">Caramu berbagi cerita. Aku suka bila kita berkesempatan untuk komunikasi, kamu selalu menceritakan apapun itu kepadaku.</div></div>
     </div>
   </section>
 
@@ -123,7 +137,7 @@
     <div class="timeline">
       <div class="tm-item">
         <div class="tm-title">Pertama kali kita jalan berdua</div>
-        <div class="tm-desc">Masih ingat betapa gugupnya kita waktu itu. Tapi dari situlah semuanya dimulai — dengan langkah yang sederhana dan hati yang penuh harap.</div>
+        <div class="tm-desc">Masih ingat betapa gugupnya waktu itu. Tapi dari situlah semuanya dimulai — dengan langkah yang sederhana dan hati yang penuh harap.</div>
       </div>
       <div class="tm-item">
         <div class="tm-title">Malam yang panjang itu</div>
@@ -136,6 +150,22 @@
       <div class="tm-item">
         <div class="tm-title">Tawa kecil yang kita ciptakan</div>
         <div class="tm-desc">Lelucon bodoh yang hanya kita yang mengerti. Kata-kata yang punya makna tersendiri di antara kita berdua.</div>
+      </div>
+      <div class="tm-item">
+        <div class="tm-title">Waktu pertama</div>
+        <div class="tm-desc">Waktu pertama aku menjemputmu kerumah, betapa geroginya aku bertemu dengan ibu kamu.</div>
+      </div>
+      <div class="tm-item">
+        <div class="tm-title">Kantin</div>
+        <div class="tm-desc">Sepulang sekolah ataupun waktu senggang di sekolah, kita pasti duduk berdua dikantin terlebih dahulu. Mungkin kadang ada gangguan dari sosok yang sering di sebut dengan Iffat hahhaha.</div>
+      </div>
+      <div class="tm-item">
+        <div class="tm-title">Sepulang sekolah</div>
+        <div class="tm-desc">Walau kita beda arah pulang, dan walau aku tidak membawa kendaraan sendiri, tetapi kita pasti saling tunggu dan jalan berdua ke gerbang depan. Yaa walau aku merasa malu karena sok sokan bareng, padahal hanya sampai depan gerbang saja.</div>
+      </div>
+      <div class="tm-item">
+        <div class="tm-title">Project-project itu</div>
+        <div class="tm-desc">Project yang memulaikan kita komunikasi. Kamu masih ingat? Pak Eko meminta bantuan kamu untuk video PPG beliau? Disitulah kita mulai ngobrol. Aku tidak tau kenapa kamu meminta bantuan ku, padahal ada amaik dan riski (Atau yang mengajak ku itu riski ya, jujur aku lupa bagaimana awalnya hehe, but yaa gitu deh). Kemudian berlanjut dengan project-project berikutnya.</div>
       </div>
     </div>
   </section>
@@ -185,449 +215,8 @@
   <footer>
     <span class="f-heart">♡</span>
     <p>Dua tahun yang tidak akan pernah aku sesali.</p>
-    <p class="f-date">13 Juni 2023 · 13 Juni 2025</p>
+    <p class="f-date">13 Juni 2024 · 13 Juni 2026</p>
   </footer>
 
-<script>
-// ════════════════════════════════════════
-//  KONFIGURASI SUPABASE
-// ════════════════════════════════════════
-const SUPABASE_URL = 'https://mhionvzwkurabadaaobf.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_w3GTzc2IRmzDZ355em-ogQ_QKVY4uPT';
-const HEADERS = {
-  'Content-Type': 'application/json',
-  'apikey': SUPABASE_KEY,
-  'Authorization': `Bearer ${SUPABASE_KEY}`
-};
-const STORAGE_URL    = `${SUPABASE_URL}/storage/v1/object/galeri-media`;
-const STORAGE_PUBLIC = `${SUPABASE_URL}/storage/v1/object/public/galeri-media`;
-
-// ════════════════════════════════════════
-//  SUPABASE — PESAN
-// ════════════════════════════════════════
-async function dbInsert(data) {
-  const r = await fetch(`${SUPABASE_URL}/rest/v1/pesan`, {
-    method: 'POST',
-    headers: { ...HEADERS, 'Prefer': 'return=representation' },
-    body: JSON.stringify(data)
-  });
-  return r.json();
-}
-async function dbFetch() {
-  const r = await fetch(`${SUPABASE_URL}/rest/v1/pesan?order=waktu.desc&select=*`, { headers: HEADERS });
-  return r.json();
-}
-
-// ════════════════════════════════════════
-//  SUPABASE — GALERI
-// ════════════════════════════════════════
-async function galeriInsert(row) {
-  const r = await fetch(`${SUPABASE_URL}/rest/v1/galeri`, {
-    method: 'POST',
-    headers: { ...HEADERS, 'Prefer': 'return=representation' },
-    body: JSON.stringify(row)
-  });
-  return r.json();
-}
-async function galeiFetch() {
-  const r = await fetch(`${SUPABASE_URL}/rest/v1/galeri?order=waktu.asc&select=*`, { headers: HEADERS });
-  return r.json();
-}
-async function galeriDelete(id, mediaUrl) {
-  await fetch(`${SUPABASE_URL}/rest/v1/galeri?id=eq.${id}`, { method: 'DELETE', headers: HEADERS });
-  if (mediaUrl) {
-    const path = mediaUrl.split('/galeri-media/')[1];
-    if (path) await fetch(`${SUPABASE_URL}/storage/v1/object/galeri-media/${path}`, {
-      method: 'DELETE',
-      headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
-    });
-  }
-}
-
-// ════════════════════════════════════════
-//  SUPABASE STORAGE — upload
-// ════════════════════════════════════════
-async function uploadToStorage(file, folder) {
-  const ext  = file.name.split('.').pop();
-  const name = `${folder}/${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`;
-  const r = await fetch(`${STORAGE_URL}/${name}`, {
-    method: 'POST',
-    headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}`, 'Content-Type': file.type, 'x-upsert': 'true' },
-    body: file
-  });
-  if (!r.ok) throw new Error('Upload gagal');
-  return `${STORAGE_PUBLIC}/${name}`;
-}
-
-// ════════════════════════════════════════
-//  PETALS
-// ════════════════════════════════════════
-function initPetals() {
-  const pc = document.getElementById('petals');
-  const colors = ['#f2d6db','#f9e4e8','#fce8ec','#efc6ce','#f5d0d7'];
-  for (let i = 0; i < 16; i++) {
-    const p = document.createElement('div');
-    p.className = 'petal';
-    const s = 5 + Math.random() * 8;
-    p.style.cssText = `left:${Math.random()*100}%;width:${s}px;height:${s*1.4}px;background:${colors[i%colors.length]};animation-duration:${10+Math.random()*12}s;animation-delay:${Math.random()*16}s;transform:rotate(${Math.random()*360}deg)`;
-    pc.appendChild(p);
-  }
-}
-
-// ════════════════════════════════════════
-//  MUSIK
-// ════════════════════════════════════════
-const bgAudio = new Audio('lagu.mp3');
-bgAudio.loop = true;
-bgAudio.volume = 0.7;
-let musicPlaying = false;
-
-function initMusic() {
-  document.getElementById('musicBtn').addEventListener('click', async () => {
-    if (!musicPlaying) {
-      try {
-        await bgAudio.play();
-        musicPlaying = true;
-        document.getElementById('musicBtn').textContent = '♫';
-        document.getElementById('musicBtn').classList.add('playing');
-        showToast('Penjaga Hati — Nadhif Basalamah ♪');
-      } catch (e) {
-        showToast('File lagu.mp3 tidak ditemukan');
-      }
-    } else {
-      bgAudio.pause();
-      bgAudio.currentTime = 0;
-      musicPlaying = false;
-      document.getElementById('musicBtn').textContent = '♪';
-      document.getElementById('musicBtn').classList.remove('playing');
-      showToast('Musik dihentikan');
-    }
-  });
-}
-
-// ════════════════════════════════════════
-//  SURAT
-// ════════════════════════════════════════
-function openLetter() {
-  document.getElementById('envPrompt').style.display = 'none';
-  document.getElementById('envelope').classList.add('opened');
-  showToast('Surat terbuka ♡');
-}
-
-// ════════════════════════════════════════
-//  LIGHTBOX
-// ════════════════════════════════════════
-let lbItems = [], lbCurrent = 0;
-
-function openLightbox(items, index) {
-  lbItems = items; lbCurrent = index;
-  renderLightbox();
-  document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow = 'hidden';
-  if (musicPlaying) bgAudio.volume = 0.15;
-}
-function closeLightbox() {
-  const lb = document.getElementById('lightbox');
-  lb.classList.remove('open');
-  document.body.style.overflow = '';
-  const vid = lb.querySelector('video');
-  if (vid) { vid.pause(); vid.src = ''; }
-  if (musicPlaying) bgAudio.volume = 0.7;
-}
-function lbPrev() { lbCurrent = (lbCurrent - 1 + lbItems.length) % lbItems.length; renderLightbox(); }
-function lbNext() { lbCurrent = (lbCurrent + 1) % lbItems.length; renderLightbox(); }
-
-function renderLightbox() {
-  const item    = lbItems[lbCurrent];
-  const content = document.getElementById('lbContent');
-  const counter = document.getElementById('lbCounter');
-  const byEl    = document.getElementById('lbBy');
-  const oldVid  = content.querySelector('video');
-  if (oldVid) { oldVid.pause(); oldVid.src = ''; }
-  content.innerHTML = '';
-  if (item.tipe === 'video') {
-    const vid = document.createElement('video');
-    vid.src = item.url; vid.controls = true; vid.autoplay = true; vid.playsInline = true;
-    content.appendChild(vid);
-  } else {
-    const img = document.createElement('img');
-    img.src = item.url; img.alt = 'kenangan';
-    content.appendChild(img);
-  }
-  counter.textContent = `${lbCurrent + 1} / ${lbItems.length}`;
-  byEl.textContent    = item.oleh === 'admin' ? 'dari kamu' : 'dari dia';
-}
-
-function initLightbox() {
-  const lb = document.getElementById('lightbox');
-  lb.addEventListener('click', e => { if (e.target === lb || e.target.id === 'lbInner') closeLightbox(); });
-  document.addEventListener('keydown', e => {
-    if (!lb.classList.contains('open')) return;
-    if (e.key === 'Escape')     closeLightbox();
-    if (e.key === 'ArrowLeft')  lbPrev();
-    if (e.key === 'ArrowRight') lbNext();
-  });
-  let touchX = 0;
-  lb.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
-  lb.addEventListener('touchend',   e => {
-    const dx = e.changedTouches[0].clientX - touchX;
-    if (Math.abs(dx) > 50) dx < 0 ? lbNext() : lbPrev();
-  });
-}
-
-// ════════════════════════════════════════
-//  GALERI
-// ════════════════════════════════════════
-let isAdmin = false, currentMedia = [];
-const ADMIN_PASS = 'admin2tahun';
-
-function toggleAdmin() {
-  if (isAdmin) {
-    isAdmin = false;
-    document.getElementById('adminBtnLabel').style.display = 'none';
-    document.getElementById('adminToggle').textContent = '⚙ Admin';
-    document.getElementById('adminToggle').style.color = '';
-    renderGallery(currentMedia);
-    showToast('Mode admin nonaktif');
-  } else {
-    const pass = prompt('Masukkan password admin:');
-    if (pass === ADMIN_PASS) {
-      isAdmin = true;
-      document.getElementById('adminBtnLabel').style.display = 'flex';
-      document.getElementById('adminToggle').textContent = '✓ Admin aktif';
-      document.getElementById('adminToggle').style.color = 'var(--rose)';
-      renderGallery(currentMedia);
-      showToast('Mode admin aktif ♡');
-    } else if (pass !== null) {
-      showToast('Password salah');
-    }
-  }
-}
-
-async function loadGallery() {
-  try {
-    const data = await galeiFetch();
-    currentMedia = Array.isArray(data) ? data : [];
-    renderGallery(currentMedia);
-  } catch (e) {
-    document.getElementById('galleryGrid').innerHTML = '<div class="gallery-empty">Gagal memuat media.</div>';
-  }
-}
-
-function renderGallery(items) {
-  const grid = document.getElementById('galleryGrid');
-  grid.innerHTML = '';
-  if (items.length === 0) {
-    grid.innerHTML = '<div class="gallery-empty">Belum ada foto atau video. Tambahkan kenangan kita ♡</div>';
-    return;
-  }
-  const lbList = items.map(p => ({ tipe: p.tipe || 'foto', url: p.media_url || p.foto_base64 || '', oleh: p.diunggah_oleh }));
-  items.forEach((p, idx) => {
-    const item = document.createElement('div');
-    item.className = 'gallery-item';
-    item.onclick   = () => openLightbox(lbList, idx);
-    const url  = p.media_url || p.foto_base64 || '';
-    const tipe = p.tipe || 'foto';
-    if (tipe === 'video') {
-      const vid = document.createElement('video');
-      vid.src = url; vid.className = 'vid-thumb'; vid.preload = 'metadata'; vid.muted = true; vid.playsInline = true;
-      vid.addEventListener('loadedmetadata', () => { vid.currentTime = 0.5; });
-      item.appendChild(vid);
-      const play = document.createElement('div');
-      play.className = 'play-icon';
-      item.appendChild(play);
-    } else {
-      const img = document.createElement('img');
-      img.src = url; img.alt = 'kenangan'; img.loading = 'lazy';
-      item.appendChild(img);
-    }
-    const by = document.createElement('div');
-    by.className = 'g-by';
-    by.textContent = p.diunggah_oleh === 'admin' ? 'kamu' : 'dia';
-    item.appendChild(by);
-    if (isAdmin) {
-      const del = document.createElement('button');
-      del.className = 'g-del'; del.textContent = '×'; del.title = 'Hapus';
-      del.onclick = async e => {
-        e.stopPropagation();
-        if (!confirm('Hapus media ini?')) return;
-        await galeriDelete(p.id, p.media_url);
-        showToast('Media dihapus');
-        loadGallery();
-      };
-      item.appendChild(del);
-    }
-    grid.appendChild(item);
-  });
-}
-
-async function uploadFiles(files, oleh) {
-  if (!files || files.length === 0) return;
-  const bar = document.getElementById('uploadBar');
-  const fill = document.getElementById('uploadFill');
-  const label = document.getElementById('uploadLabel');
-  bar.classList.add('show');
-  let done = 0;
-  const total = files.length;
-  for (const file of files) {
-    label.textContent = `Mengunggah ${done + 1} dari ${total}...`;
-    fill.style.width  = `${(done / total) * 100}%`;
-    const isVideo = file.type.startsWith('video/');
-    try {
-      if (isVideo) {
-        const url = await uploadToStorage(file, oleh);
-        await galeriInsert({ tipe: 'video', media_url: url, diunggah_oleh: oleh });
-      } else {
-        const base64 = await compressImage(await readFileAsBase64(file));
-        if (base64.length > 4_000_000) {
-          const blob = base64ToBlob(base64, 'image/jpeg');
-          const f    = new File([blob], 'foto.jpg', { type: 'image/jpeg' });
-          const url  = await uploadToStorage(f, oleh);
-          await galeriInsert({ tipe: 'foto', media_url: url, diunggah_oleh: oleh });
-        } else {
-          await galeriInsert({ tipe: 'foto', foto_base64: base64, diunggah_oleh: oleh });
-        }
-      }
-    } catch (err) { showToast(`Gagal upload: ${file.name}`); }
-    done++;
-    fill.style.width = `${(done / total) * 100}%`;
-  }
-  fill.style.width  = '100%';
-  label.textContent = 'Selesai!';
-  setTimeout(() => { bar.classList.remove('show'); fill.style.width = '0%'; }, 1200);
-  showToast(`${total} file tersimpan ♡`);
-  loadGallery();
-}
-
-function readFileAsBase64(file) {
-  return new Promise((res, rej) => {
-    const r = new FileReader();
-    r.onload = ev => res(ev.target.result); r.onerror = rej;
-    r.readAsDataURL(file);
-  });
-}
-function compressImage(base64, maxW = 800) {
-  return new Promise(res => {
-    const img = new Image();
-    img.onload = () => {
-      const scale = Math.min(1, maxW / img.width);
-      const w = img.width * scale, h = img.height * scale;
-      const c = document.createElement('canvas');
-      c.width = w; c.height = h;
-      c.getContext('2d').drawImage(img, 0, 0, w, h);
-      res(c.toDataURL('image/jpeg', 0.75));
-    };
-    img.src = base64;
-  });
-}
-function base64ToBlob(base64, mime) {
-  const arr = base64.split(','), data = atob(arr[1]), buf = new Uint8Array(data.length);
-  for (let i = 0; i < data.length; i++) buf[i] = data.charCodeAt(i);
-  return new Blob([buf], { type: mime });
-}
-
-function initGallery() {
-  document.getElementById('diaUpload').addEventListener('change', e => { uploadFiles(e.target.files, 'dia'); e.target.value = ''; });
-  document.getElementById('adminUpload').addEventListener('change', e => { uploadFiles(e.target.files, 'admin'); e.target.value = ''; });
-  loadGallery();
-}
-
-// ════════════════════════════════════════
-//  PESAN
-// ════════════════════════════════════════
-async function loadMessages() {
-  const list = document.getElementById('savedList');
-  try {
-    const data = await dbFetch();
-    if (!Array.isArray(data) || data.length === 0) {
-      list.innerHTML = '<div class="saved-empty">Belum ada pesan yang dikirim.</div>';
-      document.getElementById('savedCount').textContent = '';
-      return;
-    }
-    document.getElementById('savedCount').textContent = `${data.length} pesan`;
-    list.innerHTML = data.map(m => {
-      const d    = new Date(m.waktu);
-      const time = `${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
-      return `<div class="saved-card">
-        <div class="saved-card-msg">"${m.teks}"</div>
-        ${m.balasan_ai ? `<div class="saved-card-ai">${m.balasan_ai}</div>` : ''}
-        <span class="saved-card-time">${time}</span>
-      </div>`;
-    }).join('');
-  } catch (e) {
-    list.innerHTML = '<div class="saved-empty">Gagal memuat. Cek koneksi internet.</div>';
-  }
-}
-
-async function sendMessage() {
-  const input   = document.getElementById('msgInput');
-  const text    = input.value.trim();
-  if (!text) { showToast('Tulis sesuatu dulu ya ♡'); return; }
-  const btn     = document.getElementById('msgSendBtn');
-  const btnText = document.getElementById('msgBtnText');
-  btn.disabled  = true;
-  btnText.innerHTML = '<span class="loading-dots"><span></span><span></span><span></span></span>';
-  let aiReply = '';
-  try {
-    const resp = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        system: 'Kamu adalah penyambut pesan yang puitis dan hangat dalam sebuah website anniversary romantis. Seseorang mengirimkan pesan tentang perasaan mereka setelah membaca halaman anniversary 2 tahun hubungan HTS yang penuh cinta. Balas dengan bahasa Indonesia yang lembut, puitis, dan menyentuh hati. 2-3 kalimat saja. Jangan sebut dirimu AI. Beri respons seolah kamu adalah suara dari momen itu sendiri.',
-        messages: [{ role: 'user', content: text }]
-      })
-    });
-    const data = await resp.json();
-    aiReply = data.content?.[0]?.text || 'Pesanmu sangat berarti dan akan selalu tersimpan di sini.';
-  } catch (e) {
-    aiReply = 'Pesanmu sudah aku terima — dengan sepenuh hati ♡';
-  }
-  try {
-    await dbInsert({ teks: text, balasan_ai: aiReply });
-    document.getElementById('msgResponseText').textContent = aiReply;
-    document.getElementById('msgResponse').classList.add('show');
-    input.value = '';
-    showToast('Pesan tersimpan ♡');
-    await loadMessages();
-  } catch (e) {
-    showToast('Gagal menyimpan. Coba lagi.');
-  }
-  btn.disabled = false;
-  btnText.textContent = 'Kirim pesan';
-}
-
-// ════════════════════════════════════════
-//  TOAST
-// ════════════════════════════════════════
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg; t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2500);
-}
-
-// ════════════════════════════════════════
-//  SCROLL REVEAL
-// ════════════════════════════════════════
-function initReveal() {
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
-}
-
-// ════════════════════════════════════════
-//  INIT
-// ════════════════════════════════════════
-document.addEventListener('DOMContentLoaded', () => {
-  initPetals();
-  initMusic();
-  initLightbox();
-  initGallery();
-  loadMessages();
-  initReveal();
-});
-</script>
 </body>
 </html>
