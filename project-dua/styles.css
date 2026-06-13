@@ -211,6 +211,7 @@ section { position:relative; z-index:1; max-width:600px; margin:0 auto; padding:
   color:rgba(255,255,255,0.9); pointer-events:none;
 }
 .gallery-empty { font-family:'Cormorant Garamond',serif; font-size:15px; font-style:italic; color:var(--muted); text-align:center; padding:32px 0; grid-column:1/-1; }
+.gallery-admin-add { border:1.5px dashed var(--rose) !important; background:var(--rose-pale) !important; cursor:pointer; display:flex; align-items:center; justify-content:center; }
 
 /* ── LIGHTBOX ── */
 .lightbox {
@@ -314,6 +315,55 @@ footer p { font-family:'Cormorant Garamond',serif; font-size:16px; font-style:it
 .loading-dots span { width:5px; height:5px; border-radius:50%; background:white; animation:dotBounce 1.4s ease infinite; }
 .loading-dots span:nth-child(2) { animation-delay:0.2s; }
 .loading-dots span:nth-child(3) { animation-delay:0.4s; }
+
+/* ── KERESAHAN ── */
+.keresahan-journal {
+  background: white;
+  border: 1px solid var(--rose-light);
+  border-left: 3px solid var(--rose);
+  border-radius: 2px;
+  padding: 36px 32px;
+  position: relative;
+}
+.journal-date {
+  font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--rose-light); margin-bottom: 24px;
+}
+.keresahan-journal p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; line-height: 1.95; font-weight: 300;
+  color: var(--text); margin-bottom: 18px;
+}
+.keresahan-journal p:last-of-type { margin-bottom: 0; }
+.journal-sign {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; font-style: italic;
+  color: var(--rose); margin-top: 28px;
+}
+
+/* Versi 2 */
+.keresahan-letter {
+  background: var(--rose-pale);
+  border: 1px solid var(--rose-light);
+  border-radius: 2px;
+  padding: 40px 32px;
+}
+.keresahan-open {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px !important; font-weight: 400 !important;
+  color: var(--rose-deep) !important;
+  margin-bottom: 24px !important;
+}
+.keresahan-letter p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; line-height: 1.95; font-weight: 300;
+  color: var(--text); margin-bottom: 16px;
+}
+.keresahan-sign {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; font-style: italic;
+  color: var(--rose); margin-top: 28px; display: block;
+}
 
 /* REVEAL */
 .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.8s ease,transform 0.8s ease; }
