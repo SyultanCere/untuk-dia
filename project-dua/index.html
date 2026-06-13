@@ -6,8 +6,7 @@
   <meta name="theme-color" content="#fdf8f4">
   <title>Untuk Dirimu — 2 Tahun</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -111,12 +110,9 @@
         ＋ Foto / Video
         <input type="file" id="diaUpload" accept="image/*,video/*" multiple>
       </label>
-      <label class="gallery-btn primary" id="adminBtnLabel" style="display:none">
-        ＋ Upload (Admin)
-        <input type="file" id="adminUpload" accept="image/*,video/*" multiple>
-      </label>
-      <button class="gallery-btn" id="adminToggle" onclick="toggleAdmin()">⚙ Admin</button>
     </div>
+    <!-- Input admin tersembunyi — aktif via tap nav-brand 5x -->
+    <input type="file" id="adminUpload" accept="image/*,video/*" multiple style="display:none">
     <div class="gallery-upload-bar" id="uploadBar">
       <div class="gallery-upload-progress">
         <div class="gallery-upload-fill" id="uploadFill"></div>
@@ -198,6 +194,44 @@
     </div>
   </section>
 
+
+  <div class="divider">· · ·</div>
+
+  <!-- KERESAHAN — VERSI 1: Jurnal mengalir -->
+  <!-- GANTI DENGAN VERSI 2 JIKA LEBIH SUKA, HAPUS SALAH SATU -->
+  <!-- <section id="keresahan" class="reveal">
+    <div class="s-label">dari sudut hatiku</div>
+    <h2 class="s-title">Yang belum<br><em>sempat terucap</em></h2>
+    <div class="keresahan-journal">
+      <div class="journal-date">Juni 2026</div>
+      <p>Ada hal-hal yang sulit aku ungkapkan secara langsung. Bukan karena aku tidak mau, tapi karena kata-kata rasanya selalu kurang tepat saat aku mencoba mengatakannya.</p>
+      <p>Aku sering bertanya-tanya, apakah kamu juga merasakan hal yang sama? Apakah kamu juga pernah berdiam di tengah keramaian dan tiba-tiba memikirkan kita — tentang apa ini, tentang kemana arahnya, tentang apakah kita akan baik-baik saja?</p>
+      <p>Aku tidak selalu punya jawabannya. Dan mungkin itu yang paling berat — menjalani sesuatu yang nyata, tapi tidak tahu harus menamainya apa.</p>
+      <p>Tapi satu hal yang selalu aku yakini: apapun yang terjadi, aku tidak pernah menyesal memilih untuk ada bersamamu sejauh ini.</p>
+      <div class="journal-sign">— ditulis dengan jujur, untukmu ♡</div>
+    </div>
+  </section> -->
+
+  <!-- ═══════════════════════════════════════════
+  VERSI 2: Surat kedua — lebih personal & langsung
+  Hapus komentar ini dan section versi 1 di atas
+  jika ingin pakai versi ini
+  ════════════════════════════════════════════ -->
+
+  <section id="keresahan" class="reveal">
+    <div class="s-label">dari sudut hatiku</div>
+    <h2 class="s-title">Surat<br><em>yang kedua</em></h2>
+    <div class="keresahan-letter">
+      <p class="keresahan-open">Ini bukan surat yang mudah untuk aku tulis.</p>
+      <p>Karena di surat pertama, aku bicara tentang betapa beruntungnya aku. Tapi di sini — aku ingin jujur tentang bagian yang tidak selalu terlihat indah.</p>
+      <p>Kadang aku takut. Takut bahwa perasaan ini hanya aku yang merasakannya sekuat ini. Takut bahwa suatu hari kamu akan pergi dan aku tidak sempat bilang seberapa penting kamu bagiku.</p>
+      <p>Kadang aku lelah dengan ketidakpastian. Tapi setiap kali aku hampir menyerah pada kegelisahan itu, aku ingat lagi — kenapa aku memilih untuk tetap di sini.</p>
+      <p>Karena kamu. Selalu karena kamu.</p>
+      <div class="keresahan-sign">— dengan segala kerumitannya, aku tetap memilihmu ♡</div>
+    </div>
+  </section>
+  <!-- ═══════════════════════════════════════════ -->
+
   <div class="divider">· · ·</div>
 
   <!-- HARAPAN -->
@@ -218,5 +252,6 @@
     <p class="f-date">13 Juni 2024 · 13 Juni 2026</p>
   </footer>
 
+  <script src="main.js"></script>
 </body>
-</html>
+</html> 
