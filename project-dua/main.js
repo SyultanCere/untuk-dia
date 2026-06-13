@@ -39,7 +39,15 @@ async function galeriInsert(row) {
   return r.json();
 }
 async function galeiFetch() {
-  const r = await fetch(`${SUPABASE_URL}/rest/v1/galeri?order=waktu.asc&select=*`, { headers: HEADERS });
+  const r = await fetch(`${SUPABASE_URL}/rest/v1/galeri?order=waktu.asc&select=id,foto_base64,diunggah_oleh,waktu,tipe,media_url`, { headers: HEADERS });
+  if (!r.ok) {
+    const err = await r.json().catch(() => ({}));
+    console.error('galeiFetch error:', r.status, err);
+    // Fallback: coba tanpa kolom baru
+    const r2 = await fetch(`${SUPABASE_URL}/rest/v1/galeri?order=waktu.asc&select=id,foto_base64,diunggah_oleh,waktu`, { headers: HEADERS });
+    const data2 = await r2.json();
+    return Array.isArray(data2) ? data2.map(d => ({ ...d, tipe: 'foto', media_url: null })) : [];
+  }
   return r.json();
 }
 async function galeriDelete(id, mediaUrl) {
@@ -231,27 +239,54 @@ function initLightbox() {
 let isAdmin = false, currentMedia = [];
 const ADMIN_PASS = 'admin2tahun';
 
-function toggleAdmin() {
-  if (isAdmin) {
-    isAdmin = false;
-    document.getElementById('adminBtnLabel').style.display = 'none';
-    document.getElementById('adminToggle').textContent = '⚙ Admin';
-    document.getElementById('adminToggle').style.color = '';
+// Input admin tersembunyi — dipanggil saat secret trigger aktif
+function triggerAdminUpload() {
+  document.getElementById('adminUpload').click();
+}
+
+function activateAdmin() {
+  const pass = prompt('Password:');
+  if (pass === ADMIN_PASS) {
+    isAdmin = true;
     renderGallery(currentMedia);
-    showToast('Mode admin nonaktif');
-  } else {
-    const pass = prompt('Masukkan password admin:');
-    if (pass === ADMIN_PASS) {
-      isAdmin = true;
-      document.getElementById('adminBtnLabel').style.display = 'flex';
-      document.getElementById('adminToggle').textContent = '✓ Admin aktif';
-      document.getElementById('adminToggle').style.color = 'var(--rose)';
-      renderGallery(currentMedia);
-      showToast('Mode admin aktif ♡');
-    } else if (pass !== null) {
-      showToast('Password salah');
-    }
+    showToast('Mode admin aktif ♡');
+    // Tampilkan indikator kecil di nav brand
+    const brand = document.querySelector('.nav-brand');
+    brand.style.color = 'var(--rose-deep)';
+    setTimeout(() => { brand.style.color = ''; }, 3000);
+  } else if (pass !== null) {
+    showToast('Password salah');
   }
+}
+
+function deactivateAdmin() {
+  isAdmin = false;
+  renderGallery(currentMedia);
+  showToast('Mode admin nonaktif');
+}
+
+// Secret trigger: tap .nav-brand 5 kali dalam 3 detik
+function initAdminTrigger() {
+  const brand = document.querySelector('.nav-brand');
+  let tapCount = 0, tapTimer = null;
+
+  brand.addEventListener('click', () => {
+    tapCount++;
+    clearTimeout(tapTimer);
+
+    if (tapCount >= 5) {
+      tapCount = 0;
+      if (!isAdmin) {
+        activateAdmin();
+      } else {
+        deactivateAdmin();
+      }
+      return;
+    }
+
+    // Reset counter setelah 2 detik tidak ada tap
+    tapTimer = setTimeout(() => { tapCount = 0; }, 2000);
+  });
 }
 
 async function loadGallery() {
@@ -286,6 +321,27 @@ async function loadGallery() {
 function renderGallery(items) {
   const grid = document.getElementById('galleryGrid');
   grid.innerHTML = '';
+
+  // Tombol upload admin — hanya muncul saat mode admin aktif
+  if (isAdmin) {
+    const adminUploadBtn = document.createElement('label');
+    adminUploadBtn.className = 'gallery-item gallery-admin-add';
+    adminUploadBtn.innerHTML = `
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none">
+        <span style="font-size:22px;color:var(--rose)">＋</span>
+        <span style="font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">upload</span>
+      </div>
+      <input type="file" id="adminUpload" accept="image/*,video/*" multiple style="display:none">
+    `;
+    // Pasang listener baru
+    const inp = adminUploadBtn.querySelector('input');
+    inp.addEventListener('change', async e => {
+      const files = [...e.target.files];
+      inp.value = '';
+      await uploadFiles(files, 'admin');
+    });
+    grid.appendChild(adminUploadBtn);
+  }
 
   // Filter item yang punya konten
   const valid = items.filter(p => p.foto_base64 || p.media_url);
@@ -444,8 +500,7 @@ function initGallery() {
   const adminInput = document.getElementById('adminUpload');
 
   diaInput.addEventListener('change', async e => {
-    const files = [...e.target.files]; // salin dulu sebelum direset
-    // Reset segera agar bisa pilih file lagi kapanpun
+    const files = [...e.target.files];
     diaInput.value = '';
     await uploadFiles(files, 'dia');
   });
@@ -456,6 +511,7 @@ function initGallery() {
     await uploadFiles(files, 'admin');
   });
 
+  initAdminTrigger();
   loadGallery();
 }
 
